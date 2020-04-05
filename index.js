@@ -1,19 +1,25 @@
 const main = () => {
-    debugger;
-    let shield = document.getElementsByClassName("fa-shield-alt");
-    shield.onmouseover = () => {
-        let label = document.getElementsByClassName("label");
+    let label = document.getElementsByClassName("label")[0];
+    let shield = document.getElementsByClassName("fa-shield-alt")[0];
+    shield.onmouseover = function() {
         label.textContent = "Web Security";
-    }
-    let database = document.getElementsByClassName("fa-database");
-    database.onmouseover = () => {
-        let label = document.getElementsByClassName("label");
+    };
+    shield.onmouseleave = function() {
+        label.textContent = "";
+    };
+    let database = document.getElementsByClassName("fa-database")[0];
+    database.onmouseover = function() {
         label.textContent = "Database Implementation";
-    }
-    let network = document.getElementsByClassName("fa-project-diagram");
-    network.onmouseover = () => {
-        let label = document.getElementsByClassName("label");
+    };
+    database.onmouseleave = function() {
+        label.textContent = "";
+    };
+    let network = document.getElementsByClassName("fa-project-diagram")[0];
+    network.onmouseover = function() {
         label.textContent = "Distributed Computing";
+    };
+    network.onmouseleave = function() {
+        label.textContent = "";
     }
 }
 
