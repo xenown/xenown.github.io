@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+}
+
+.nav {
+  z-index: 880;
+  background-color: #ffe600;
+  padding: 0 25px 0 25px;
+  box-shadow: 0 3px 8px gray;
+  display: grid;
+  grid-template-columns: [logo-start] 70px [logo-end] auto [github-start] 70px [github-end linkedin-start] 70px [linkedin-end];
+  grid-template-rows: [nav-start] auto [nav-end];
+  grid-gap: 0 5px;
+}
+
+.logo {
+  font-family: Roboto;
+  font-style: bold;
+  font-size: 6vh;
+  color: #000000;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  grid-area: logo-start/span logo-end;
+  grid-row: nav-start/span nav-end;
+  place-self: center;
+}
+
+.github {
+  grid-column: github-start/span github-end;
+  grid-row: nav-start/span nav-end;
+  place-self: center;
+}
+
+.linkedin {
+  grid-column: linkedin-start/linkedin-end;
+  grid-row: nav-start/nav-end;
+  place-self: center;
+}
+
+.iconback {
+  background-color: black;
+  border-radius: 50%;
+  padding: 6px 8px 6px 8px;
+}
+
+.iconback a {
+  color: white;
+}
+
+.content {
+  display: grid;
+  padding: 100px 100px 0 100px;
+  grid-template-columns: [profile-start] 2fr [profile-end intro-start] 5fr [intro-end];
+  grid-template-rows: [profilerow-start] auto [profilerow-end];
+  grid-gap: 0 50px;
+}
+
+.profile img {
+  width: 100%;
+  grid-column: profile-start/span profile-end;
+  grid-row: profilerow-start/span profilerow-end;
+  place-self: center start;
+}
+
+.introduction {
+  font-family: Reenie Beanie;
+  font-style: normal;
+  font-size: 7vh;
+  color: #000000;
+  grid-column: intro-start/span intro-end;
+  grid-row: profilerow-start/span profilerow-end;
+  place-self: center stretch;
+}
+
+.interest {
+  display: grid;
+  padding: 100px 100px 0 100px;
+  grid-template-columns: [preicon-start] 1fr [preicon-end icon-start] 1fr [icon-end label-start] 1fr [label-end];
+  grid-template-rows: [interest-start] auto [interest-end];
+  grid-gap: 0 25px;
+}
+
+.preicon {
+  font-family: Reenie Beanie;
+  font-style: normal;
+  font-size: 5vh;
+  color: #000000;
+  grid-column: preicon-start/span preicon-end;
+  grid-row: interest-start/span interest-end;
+  place-self: center start;
+}
+
+.icon {
+  grid-column: icon-start/span icon-end;
+  grid-row: interest-start/span interest-end;
+  place-self: center;
+}
+
+.icon i {
+  padding: 0 10px 0 10px;
+}
+
+.label {
+  font-family: Reenie Beanie;
+  font-style: normal;
+  font-size: 4vh;
+  color: #000000;
+  grid-column: label-start/span label-end;
+  grid-row: interest-start/span interest-end;
+  place-self: center end;
+}
+
+/*# sourceMappingURL=index.css.map */
