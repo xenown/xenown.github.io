@@ -2,6 +2,12 @@ body {
   margin: 0;
 }
 
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
 .nav {
   z-index: 880;
   background-color: #ffe600;
@@ -54,13 +60,33 @@ body {
   grid-gap: 0 50px;
 }
 
-.profile img {
-  width: 100%;
+.profile {
   grid-column: profile-start/span profile-end;
   grid-row: profilerow-start/span profilerow-end;
   place-self: center start;
 }
 
+.profile img {
+  width: 100%;
+  animation-name: profile-picture;
+  animation-duration: 0.4s;
+  border-radius: 50%;
+}
+
+@keyframes profile-picture {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 110%;
+  }
+  60% {
+    width: 110%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .introduction {
   font-family: Reenie Beanie;
   font-style: normal;
@@ -71,6 +97,52 @@ body {
   place-self: center stretch;
 }
 
+.underline1 {
+  left: 0px;
+  background-color: black;
+  animation-name: underline-1;
+  animation-duration: 0.4s;
+  animation-delay: 1s;
+}
+
+.underline2 {
+  left: 20px;
+  animation-name: underline-2;
+  animation-duration: 0.4s;
+  animation-delay: 2s;
+}
+
+.underline3 {
+  left: 40px;
+  animation-name: underline-3;
+  animation-duration: 0.4s;
+  animation-delay: 3s;
+}
+
+@keyframes underline-1 {
+  0% {
+    height: 3px;
+  }
+  100% {
+    width: 20px;
+  }
+}
+@keyframes underline-2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20px;
+  }
+}
+@keyframes underline-3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20px;
+  }
+}
 .interest {
   display: grid;
   padding: 100px 100px 0 100px;
