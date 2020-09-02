@@ -81,7 +81,7 @@ body {
 .profile img {
   width: 100%;
   animation-name: profile-picture;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   border-radius: 50%;
 }
 
@@ -101,6 +101,13 @@ body {
   grid-column: intro-start / span intro-end;
   grid-row: profilerow-start / span profilerow-end;
   place-self: center stretch;
+  .subtag {
+    font-size: 4vh;
+  }
+  
+  .resume {
+    font-size: 4vh; 
+  }  
 }
 
 .underline1 {
